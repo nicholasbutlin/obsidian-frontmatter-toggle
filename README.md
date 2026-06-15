@@ -61,3 +61,7 @@ DOM (for example when switching between reading and editing modes).
 The repo is the plugin folder itself. With the
 [Hot Reload](https://github.com/pjeby/hot-reload) plugin installed, the
 `.hotreload` marker file makes Obsidian reload the plugin on save.
+
+## License
+
+[MIT](LICENSE)
