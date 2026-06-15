@@ -1,0 +1,22 @@
+{
+  "name": "frontmatter-toggle",
+  "version": "1.0.0",
+  "description": "Toggle YAML frontmatter / Properties visibility across all notes from a ribbon button or command.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build": "node validate.mjs"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "frontmatter"
+  ],
+  "author": "Nicholas",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.3"
+  }
+}

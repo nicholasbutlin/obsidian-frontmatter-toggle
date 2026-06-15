@@ -80,6 +80,21 @@ The repo is the plugin folder itself. With the
 [Hot Reload](https://github.com/pjeby/hot-reload) plugin installed, the
 `.hotreload` marker file makes Obsidian reload the plugin on save.
 
+There is no build step — `main.js` is committed directly. `npm run build`
+validates the shipped artifacts (`main.js` syntax, `manifest.json` /
+`versions.json` consistency).
+
+### Releases
+
+Releases are automated with
+[semantic-release](https://github.com/semantic-release/semantic-release) on
+every push to `main` (see `.github/workflows/release.yml`). The version is
+derived from [Conventional Commits](https://www.conventionalcommits.org)
+(`fix:` → patch, `feat:` → minor, `feat!:` → major), which updates
+`manifest.json` / `versions.json` and publishes a GitHub release with the
+plugin assets attached. Bump `minAppVersion` by hand in `manifest.json` when
+you start relying on a newer Obsidian API.
+
 ## License
 
 [MIT](LICENSE)

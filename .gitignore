@@ -6,3 +6,6 @@ data.json
 
 # OS / editor cruft
 .DS_Store
+
+# Maintainer-only release/submission note
+RELEASING.md
