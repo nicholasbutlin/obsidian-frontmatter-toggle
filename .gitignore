@@ -1,0 +1,8 @@
+# Per-vault runtime state — not part of the plugin source
+data.json
+
+# Hot Reload plugin marker (local dev only)
+.hotreload
+
+# OS / editor cruft
+.DS_Store

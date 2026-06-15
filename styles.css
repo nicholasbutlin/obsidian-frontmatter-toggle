@@ -1,0 +1,77 @@
+/*
+ * Frontmatter Toggle — styles
+ *
+ * Hide frontmatter / Properties unless EITHER:
+ *   - <body> has `show-frontmatter` (global toggle), OR
+ *   - the per-view container has `show-frontmatter`
+ *     (set per-note via `cssclasses: show-frontmatter`).
+ */
+
+/* Reading view */
+body:not(.show-frontmatter)
+  .markdown-preview-view:not(.show-frontmatter)
+  .metadata-container {
+  display: none !important;
+}
+
+/* Live Preview / Source view — the Properties UI block */
+body:not(.show-frontmatter)
+  .markdown-source-view:not(.show-frontmatter)
+  .metadata-container {
+  display: none !important;
+}
+
+/* Source mode (raw YAML lines between --- ---) */
+body:not(.show-frontmatter)
+  .markdown-source-view:not(.show-frontmatter)
+  .cm-line:has(.cm-hmd-frontmatter) {
+  display: none !important;
+}
+
+/* ── Inline toggle button (sits under each note's title) ──────── */
+.frontmatter-toggle-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 1.25em 0;
+  padding: 3px 10px;
+  font-size: 0.78em;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  opacity: 0.55;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.frontmatter-toggle-inline__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frontmatter-toggle-inline__icon .svg-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.frontmatter-toggle-inline:hover {
+  opacity: 1;
+  background: var(--interactive-hover);
+  color: var(--text-normal);
+}
+
+.frontmatter-toggle-inline[aria-pressed='true'] {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+  opacity: 0.75;
+}
+
+.frontmatter-toggle-inline[aria-pressed='true']:hover {
+  opacity: 1;
+}
