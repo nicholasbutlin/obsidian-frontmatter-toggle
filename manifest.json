@@ -1,7 +1,7 @@
 {
   "id": "frontmatter-toggle",
   "name": "Frontmatter Toggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.4.0",
   "description": "Toggle YAML frontmatter / Properties visibility across all notes from a ribbon button or command.",
   "author": "Nicholas",
