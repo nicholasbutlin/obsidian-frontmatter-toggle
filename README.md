@@ -32,15 +32,33 @@ cssclasses: show-frontmatter
 
 ## Installation
 
-This is a local (unlisted) plugin. Install it manually:
+This plugin isn't in the community catalogue, so install it from GitHub.
 
-1. Copy `main.js`, `manifest.json`, and `styles.css` into your vault at:
+### Via BRAT (recommended — gets updates automatically)
+
+1. Install the [BRAT](https://github.com/TfTHacker/obsidian42-brat) community
+   plugin and enable it.
+2. Run the command **BRAT: Add a beta plugin for testing** and paste this
+   repo's URL:
+
+   ```
+   https://github.com/nicholasbutlin/obsidian-frontmatter-toggle
+   ```
+
+3. BRAT installs the latest release. Enable **Frontmatter Toggle** under
+   **Settings → Community plugins**.
+
+### Manual
+
+1. Download `main.js`, `manifest.json`, and `styles.css` from the
+   [latest release](https://github.com/nicholasbutlin/obsidian-frontmatter-toggle/releases/latest).
+2. Copy them into your vault at:
 
    ```
    <your-vault>/.obsidian/plugins/frontmatter-toggle/
    ```
 
-2. In Obsidian, open **Settings → Community plugins** and enable
+3. In Obsidian, open **Settings → Community plugins** and enable
    **Frontmatter Toggle**.
 
 > The plugin does not ship a `data.json`; on first run it defaults to
